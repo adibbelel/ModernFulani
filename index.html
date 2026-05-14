@@ -460,6 +460,32 @@
             color: #F4D03F;
         }
 
+        .footer-legal {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-legal .legal-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #392121;
+            margin-bottom: 4px;
+        }
+        .footer-legal a {
+            color: #392121;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
+        }
+        .footer-legal a:hover {
+            color: #F4D03F;
+        }
+
         /* ============================================ */
         /*  RESPONSIVE DESIGN - MOBILE & TABLET         */
         /* ============================================ */
@@ -752,6 +778,16 @@
             <a href="mailto:modernfulani@gmail.com">
                 <span></span> modernfulani@gmail.com
             </a>
+        </div>
+        <div class="footer-legal">
+            <span class="legal-title">Legal</span>
+            <a href="/privacy-policy.html" target="_blank" rel="noopener noreferrer">
+                <span></span>Privacy Policy
+            </a>
+            <a href="/non-refund-policy.html" target="_blank" rel="noopener noreferrer">
+                <span></span>Non-Refund Policy
+            </a>
+            <p>&copy; 2026 Modern Fulani</p>
         </div>
     </footer>
 
