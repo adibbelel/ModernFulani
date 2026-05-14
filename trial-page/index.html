@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Trial – Modern Fulani</title>
+
+    <meta name="title" content="Free Trial - Modern Fulani (Fulfulde) For Beginners">
+    <meta name="description" content="Try a free sample of the Modern Fulani course. Real Nigerian Fulfulde lessons before you buy.">
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        @font-face {
+            font-family: 'Barlon';
+            src: url(/Fonts/Barlon\ Regular.otf) format('opentype');
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            background-color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ========== SIMPLE HEADER ========== */
+        .site-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 8%;
+            border-bottom: 1px solid #f0f0f0;
+            background: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: Barlon, 'Segoe UI', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #392121;
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+
+        .btn-back {
+            display: inline-block;
+            padding: 10px 24px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            background-color: #392121;
+            color: #ffffff;
+            transition: background-color 0.3s ease;
+            white-space: nowrap;
+        }
+        .btn-back:hover {
+            background-color: #2E7200;
+        }
+
+        /* ========== SIDE-BY-SIDE LAYOUT ========== */
+        .trial-container {
+            display: flex;
+            flex: 1;
+            max-width: 1400px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 40px 5%;
+            gap: 40px;
+            align-items: stretch;
+        }
+
+        .trial-column {
+            flex: 1;
+            background: #f9f9f9;
+            border-radius: 12px;
+            padding: 48px 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            transition: transform 0.2s ease;
+        }
+
+        .trial-column:hover {
+            transform: translateY(-4px);
+        }
+
+        /* Image area – now properly styled */
+        .image-area {
+            width: 100%;
+            margin-bottom: 70px;      /* space between image and heading */
+            text-align: center;
+        }
+
+        .image-area img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px;
+            /* Optional: control max height so images don’t overwhelm the column */
+            max-height: 220px;
+            object-fit: contain;
+        }
+
+        .trial-column h2 {
+            font-family: Barlon, 'Segoe UI', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 200;
+            color: #392121;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .trial-column .description {
+            font-size: 1.1rem;
+            color: #555555;
+            margin-bottom: 24px;
+            line-height: 1.7;
+        }
+
+        .trial-column ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 32px;
+        }
+        .trial-column li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 14px;
+            color: #444;
+        }
+        .trial-column li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #2E7200;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            padding: 14px 40px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            align-self: flex-start;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .btn-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+        }
+
+        .btn-red { background-color: #BB0C11; color: #fff; }
+        .btn-green { background-color: #2E7200; color: #fff; }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background-color: #ffffff;
+            color: #cccccc;
+            padding: 45px 8% 35px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 35px;
+            margin-top: 40px;
+        }
+        .footer-brand {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #392121;
+            letter-spacing: 1px;
+            font-family: Barlon, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .footer-contact {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .footer-contact .contact-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #392121;
+            margin-bottom: 4px;
+        }
+        .footer-contact a {
+            color: #392121;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
+        }
+        .footer-contact a:hover {
+            color: #F4D03F;
+        }
+
+        .footer-legal {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-legal .legal-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #392121;
+            margin-bottom: 4px;
+        }
+        .footer-legal a {
+            color: #392121;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
+        }
+        .footer-legal a:hover {
+            color: #F4D03F;
+        }
+
+        .imgcrp {
+            width: 320px;
+            height: 300px;
+            object-fit: cover;
+            object-position: 47%;
+            transform: scale(1.5);
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 900px) {
+            .trial-container {
+                flex-direction: column;
+                padding: 30px 5%;
+                gap: 30px;
+            }
+            .trial-column h2 {
+                font-size: 2.2rem;
+            }
+            .image-area img {
+                max-height: 180px;   /* slightly smaller on tablet */
+            }
+        }
+
+        @media (max-width: 500px) {
+            .site-header {
+                padding: 12px 5%;
+            }
+            .logo {
+                font-size: 1.5rem;
+            }
+            .btn-back {
+                padding: 8px 16px;
+                font-size: 0.85rem;
+            }
+            .trial-column {
+                padding: 32px 20px;
+            }
+            .trial-column h2 {
+                font-size: 1.8rem;
+            }
+            .btn-cta {
+                padding: 12px 24px;
+                font-size: 0.95rem;
+            }
+            .image-area img {
+                max-height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Simple Header: logo left, back button right -->
+    <header class="site-header">
+        <a href="index.html" class="logo">MODERN FULANI</a>
+        <a href="index.html" class="btn-back">← Back to Home</a>
+    </header>
+
+    <!-- Side-by-side columns -->
+    <main class="trial-container">
+        <!-- Left: Free Trial -->
+        <div class="trial-column">
+            <div class="image-area">
+                <img src="/images/Free-Trial.png" alt="Free trial preview" class="imgcrp">
+            </div>
+            <h2>Free Trial</h2>
+            <p class="description">
+                Start learning real Nigerian Fulfulde with <strong>3 audios</strong> from the complete course.
+                Get a feel for the teaching style, content quality, and see how the course builds your proficiency step by step.
+            </p>
+            <ul>
+                <li>Instant access to Lessons 1 & 2</li>
+                <li>Audio + guided thinking exercises</li>
+                <li>See how the course builds skills step by step</li>
+            </ul>
+            <!-- Link to your free trial delivery (e.g. sign-up form, email sequence, etc.) -->
+            <a href="https://drive.google.com/drive/folders/1c_RdMzuG158VyEt6YAjCQ0N4hCeysvyD?usp=sharing" class="btn-cta btn-red">Start Free Trial</a>
+        </div>
+
+        <!-- Right: Full Course -->
+        <div class="trial-column">
+            <div class="image-area">
+                <!-- You can change this image to one that better represents the full course -->
+                <img src="/images/Digital_Course_Headphones.png" alt="Full course preview" class="imgcrp">
+            </div>
+            <h2>Full Course</h2>
+            <p class="description">
+                The complete <strong>Modern Fulani (Fulfulde) For Beginners</strong> course takes you from
+                your first words all the way to forming real sentences and understanding everyday conversations.
+            </p>
+            <ul>
+                <li>30+ structured lessons</li>
+                <li>Lifetime access</li>
+                <li>Learn at your own pace, on any device</li>
+                <li>Direct payment via Paystack</li>
+            </ul>
+            <!-- Link to your main sales page or directly to payment -->
+            <a href="https://paystack.com/buy/modern-fulani-fulfulde-for-beginners-njfwdx" class="btn-cta btn-green">Get Full Access</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-brand">
+            MODERN FULANI
+        </div>
+        <div class="footer-contact">
+            <span class="contact-title">Contact</span>
+            <a href="https://www.instagram.com/modernfulani/" target="_blank" rel="noopener noreferrer">
+                <span></span> Instagram
+            </a>
+            <a href="mailto:modernfulani@gmail.com">
+                <span></span> modernfulani@gmail.com
+            </a>
+        </div>
+        <div class="footer-legal">
+            <span class="legal-title">Legal</span>
+            <a href="/privacy-policy/" target="_blank" rel="noopener noreferrer">
+                <span></span>Privacy Policy
+            </a>
+            <a href="/non-refund-policy/" target="_blank" rel="noopener noreferrer">
+                <span></span>Non-Refund Policy
+            </a>
+            <p>&copy; 2026 Modern Fulani</p>
+        </div>
+    </footer>
+
+</body>
+</html>
